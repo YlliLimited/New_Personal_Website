@@ -89,3 +89,62 @@ body{
 }
 
 /* Base info End */
+
+
+
+
+
+
+
+/* Vertical Lines */
+
+.verticalLine{
+  writing-mode:vertical-lr;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 1vw;
+
+  color: var(--primary-color);
+}
+
+.vlR{
+  right: 0px;
+  margin-right: 1vw;
+}
+
+
+/* Vertical Lines End*/
+
+
+
+
+
+
+
+
+
+/* Navbar */
+
+.navLinks{
+  list-style: none;
+  padding: 0px;
+  position: fixed;
+  left: 50%;
+  top: 10px;
+  transform: translateX(-50%);
+  width: fit-content;
+
+  li{
+    margin: 0px 2.2vw;
+    display: inline;
+
+    a{
+      color: var(--primary-contrast-color);
+      text-decoration: none;
+    }
+
+  }
+}
+
+/* Navbar End */
