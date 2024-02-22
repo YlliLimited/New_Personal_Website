@@ -1,3 +1,5 @@
+//Hero 
+
 const hero = {
   heroSections: document.querySelector(".heroBackground"),
   child1: document.querySelector(".heroBackground .child:nth-child(1)"),
@@ -29,7 +31,6 @@ const hero = {
     }
   },
 }
-
 window.addEventListener("mousemove", function() {
   if (hero.heroSections.matches(":hover")){
     hero.child1.onmouseover = function() {hero.hoverEffect(hero.child1);};
@@ -44,5 +45,44 @@ window.addEventListener("mousemove", function() {
   hero.child4.style.width = "25%";
   document.querySelector(".heroText").style.color = "var(--color-other-0)";
 }
-console.log(hero.heroSections.matches(":hover"));
 })
+
+//Hero End
+
+
+
+
+//Navbar
+let navStatus = "closed";
+const navBackground = document.querySelector(".navBackground");
+const navCard = document.querySelector(".navCard");
+const navButton = document.querySelector(".navButton");
+
+  function toggleNavbar(){
+    console.log("clocking");
+    if (navStatus === "closed"){
+      navBackground.style.width = "100%";
+      navBackground.style.height = "100vh";
+
+      navCard.style.width = "30vw";
+
+      navButton.style.left = "calc(30vw + 20px)";
+
+      navStatus = "opened";
+    } else{
+      navBackground.style.width = "0%";
+      navBackground.style.height = "0vh";
+
+      navCard.style.width = "0vw";
+
+      navButton.style.left = "20px";
+
+      navStatus = "closed";
+
+     }
+  }
+
+navButton.onclick = function() {toggleNavbar()};
+navBackground.onclick = function() {toggleNavbar()};
+
+//Navbar End

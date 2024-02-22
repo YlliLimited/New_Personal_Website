@@ -143,8 +143,8 @@ body, html{
   position: fixed;
   z-index: 10;
 
-  top: 1vw;
-  left: 1vw;
+  top: 20px;
+  left: 20px;
 
   display: flex;
   justify-content: center;
@@ -160,15 +160,13 @@ body, html{
 
     .navPoint{
       background-color: var(--color-other-0);
-      mix-blend-mode: difference;
       width: 10px;
       aspect-ratio: 1;
-
       border-radius: 100000px;
     }
   }
 
-  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, left 0.2s;
 }
 .navButton:hover{
   cursor: pointer;
@@ -178,7 +176,108 @@ body, html{
   aspect-ratio: 1/1.15;
 }
 
+.navBackground{
+    z-index: 10;
+
+    width: 0%;
+    height: 0vh;
+
+    position: fixed;
+
+    background-color: rgb(200, 174, 125, 0.1);
+
+  .navCard{
+    width: 0px;
+    aspect-ratio:1;
+    position: fixed;
+    background-color: var(--color-other-0);
+    top: 0px;
+    left: 0px;
+
+    z-index: 10;
+
+    border-bottom-right-radius: 150px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    overflow: hidden;
+
+    transition: width 0.2s, height 0.2s;
+
+
+    .navSection{
+      width: 50%;
+      height: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .navSection:hover{
+      cursor: pointer;
+    }
+
+    .navSection:nth-child(1){
+      background-color: var(--color-other-0);
+    }
+    .navSection:nth-child(2){
+      background-color: var(--color-other-1);
+    }
+    .navSection:nth-child(3){
+       background-color: var(--color-other-2);
+    }
+    .navSection:nth-child(4){
+      border-radius: inherit;
+       background-color: var(--color-other-3);
+    }
+
+    p{
+      z-index: 5;
+      font-family: "Fondamento";
+      font-size: 2rem;
+      color: rgb(40, 40, 40);
+    }
+
+    .navCardCircle{
+      position: absolute;
+      width: 0px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      z-index: 0;
+
+      transition: width 0.2s;
+    }
+    .navSection:nth-child(1) .navCardCircle{
+      background-color: var(--color-other-3);
+    }
+    .navSection:nth-child(2) .navCardCircle{
+      background-color: var(--color-other-2);
+    }
+    .navSection:nth-child(3) .navCardCircle{
+      background-color: var(--color-other-1);
+    }
+    .navSection:nth-child(4) .navCardCircle{
+      background-color: var(--color-other-0);
+    }
+    .navSection:hover .navCardCircle{
+      width: 130px;
+    }
+}
+}
+
+
+
 /* Navbar End */
+
+
+
+
+
 
 
 
