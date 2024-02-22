@@ -36,14 +36,13 @@ window.addEventListener("mousemove", function() {
     hero.child2.onmouseover = function() {hero.hoverEffect(hero.child2);};
     hero.child3.onmouseover = function() {hero.hoverEffect(hero.child3);};
     hero.child4.onmouseover = function() {hero.hoverEffect(hero.child4);};
-    document.querySelector(".heroText").style.textShadow = "1px 1px var(--quantertary-color)";
+    document.querySelector(".heroText").style.color = "transparent";
 } else{
   hero.child1.style.width = "25%";
   hero.child2.style.width = "25%";
   hero.child3.style.width = "25%";
   hero.child4.style.width = "25%";
-
-  document.querySelector(".heroText").style.boxShadow = "0px 0px var(--quantertary-color)";
+  document.querySelector(".heroText").style.color = "var(--color-other-0)";
 }
 console.log(hero.heroSections.matches(":hover"));
 })
