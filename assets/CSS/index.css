@@ -113,7 +113,7 @@ body, html{
   transform: translateY(-50%);
   margin-left: 1vw;
 
-  color: var(--primary-color);
+  color: var(--color-other-0);
 
   z-index: 5;
 }
@@ -136,7 +136,47 @@ body, html{
 
 /* Navbar */
 
+.navButton{
+  width: 35px;
+  aspect-ratio: 1;
 
+  position: fixed;
+  z-index: 10;
+
+  top: 1vw;
+  left: 1vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  div{
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    .navPoint{
+      background-color: var(--color-other-0);
+      mix-blend-mode: difference;
+      width: 10px;
+      aspect-ratio: 1;
+
+      border-radius: 100000px;
+    }
+  }
+
+  transition: transform 0.2s linear;
+}
+.navButton:hover{
+  cursor: pointer;
+  transform: rotate(45deg);
+}
+.navButton:hover .navPoint {
+  aspect-ratio: 1/1.15;
+}
 
 /* Navbar End */
 
