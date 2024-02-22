@@ -59,7 +59,6 @@ const navCard = document.querySelector(".navCard");
 const navButton = document.querySelector(".navButton");
 
   function toggleNavbar(){
-    console.log("clocking");
     if (navStatus === "closed"){
       navBackground.style.width = "100%";
       navBackground.style.height = "100vh";
