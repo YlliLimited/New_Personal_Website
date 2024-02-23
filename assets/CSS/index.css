@@ -239,7 +239,7 @@ body, html{
     p{
       z-index: 5;
       font-family: "Fondamento";
-      font-size: 2rem;
+      font-size: clamp(20px,2cqw, 4rem);
       color: rgb(40, 40, 40);
     }
 
@@ -265,7 +265,7 @@ body, html{
       background-color: var(--color-other-0);
     }
     .navSection:hover .navCardCircle{
-      width: 130px;
+      width: 9cqw;
     }
 }
 }

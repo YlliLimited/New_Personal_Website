@@ -63,9 +63,9 @@ const navButton = document.querySelector(".navButton");
       navBackground.style.width = "100%";
       navBackground.style.height = "100vh";
 
-      navCard.style.width = "30vw";
+      navCard.style.width = "clamp(300px, 30vw, 1000px)";
 
-      navButton.style.left = "calc(30vw + 20px)";
+      navButton.style.left = "calc(clamp(320px, 30vw, 1000px) + 20px)";
 
       navStatus = "opened";
     } else{
