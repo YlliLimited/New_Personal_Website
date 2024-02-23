@@ -172,9 +172,6 @@ body, html{
   cursor: pointer;
   transform: rotate(45deg);
 }
-.navButton:hover .navPoint {
-  aspect-ratio: 1/1.15;
-}
 
 .navBackground{
     z-index: 10;
@@ -333,6 +330,10 @@ body, html{
       width: 25%;
       height: 100%;
 
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
       transition: width 0.1s ease-out;
 
       div{
@@ -342,7 +343,7 @@ body, html{
     }
     
     .child:nth-child(1){
-      background-image: url(/assets/images/greenery_forest_nature_path_with_sunbeam_4k_hd_nature-1920x1080.jpg);
+      background-image: url(/assets/images/img_2.JPG);
 
       div{
         background-color: var(--primary-color);
@@ -354,7 +355,7 @@ body, html{
     }
 
     .child:nth-child(2){
-      background-image: url(/assets/images/greenery_forest_nature_path_with_sunbeam_4k_hd_nature-1920x1080.jpg);
+      background-image: url(/assets/images/img_1.JPG);
 
       div{
         background-color: var(--secondary-color);
@@ -366,7 +367,7 @@ body, html{
     }
 
     .child:nth-child(3){
-      background-image: url(/assets/images/greenery_forest_nature_path_with_sunbeam_4k_hd_nature-1920x1080.jpg);
+      background-image: url(/assets/images/img_3.JPG);
 
       div{
         background-color: var(--tertiary-color);
@@ -378,7 +379,7 @@ body, html{
     }
 
     .child:nth-child(4){
-      background-image: url(/assets/images/greenery_forest_nature_path_with_sunbeam_4k_hd_nature-1920x1080.jpg);
+      background-image: url(/assets/images/img_4.JPG);
 
       div{
         background-color: var(--quantertary-color);
