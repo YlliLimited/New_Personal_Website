@@ -196,7 +196,7 @@ body, html{
   transform: translateY(-50%);
   margin-left: 1vw;
 
-  color: var(--color-other-0);
+  color: var(--primary-contrast-color);
 
   z-index: 5;
 }
@@ -241,7 +241,7 @@ body, html{
     align-items:center;
 
     .navPoint{
-      background-color: var(--color-other-0);
+      background-color: var(--primary-contrast-color);
       width: 10px;
       aspect-ratio: 1;
       border-radius: 100000px;
@@ -275,7 +275,7 @@ body, html{
 
     z-index: 10;
 
-    border-bottom-right-radius: 150px;
+    border-bottom-right-radius: 100px;
 
 
     display: flex;
@@ -319,7 +319,7 @@ body, html{
       z-index: 5;
       font-family: "Fondamento";
       font-size: clamp(20px,2cqw, 4rem);
-      color: rgb(40, 40, 40);
+      color: var(--primary-contrast-color);
     }
 
     .navCardCircle{
@@ -382,7 +382,7 @@ body, html{
     align-items: center;
     flex-wrap: nowrap;
 
-    color: rgb(49, 61, 38);
+    color: var(--primary-contrast-color);
     transition: color 0.2s;
 
     z-index: 5;
@@ -428,7 +428,7 @@ body, html{
       background-image: url(/assets/images/img_2.JPG);
 
       div{
-        background-color: var(--primary-color);
+        background-color: var(--color-other-0);
         transition: background-color 0.2s;
       }
       div:hover{
@@ -440,7 +440,7 @@ body, html{
       background-image: url(/assets/images/img_1.JPG);
 
       div{
-        background-color: var(--secondary-color);
+        background-color: var(--color-other-1);
         transition: background-color 0.2s;
       }
       div:hover{
@@ -452,7 +452,7 @@ body, html{
       background-image: url(/assets/images/img_3.JPG);
 
       div{
-        background-color: var(--tertiary-color);
+        background-color: var(--color-other-2);
         transition: background-color 0.2s;
       }
       div:hover{
@@ -464,7 +464,7 @@ body, html{
       background-image: url(/assets/images/img_4.JPG);
 
       div{
-        background-color: var(--quantertary-color);
+        background-color: var(--color-other-3);
         transition: background-color 0.2s;
       }
       div:hover{
@@ -500,16 +500,16 @@ body, html{
     }
     
     .child:nth-child(1){
-      background-color: var(--primary-color);
+      background-color: var(--color-other-0);
     }
     .child:nth-child(2){
-      background-color: var(--secondary-color);
+      background-color: var(--color-other-1);
     }
     .child:nth-child(3){
-      background-color: var(--tertiary-color);
+      background-color: var(--color-other-2);
     }
     .child:nth-child(4){
-      background-color: var(--quantertary-color);
+      background-color: var(--color-other-3);
     }
   }
   

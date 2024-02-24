@@ -173,7 +173,7 @@ window.addEventListener("mousemove", function(event) {
       hero.heroText.style.color = "transparent";
   } else{
     hero.normalEffect();
-    hero.heroText.style.color = "var(--color-other-0)";
+    hero.heroText.style.color = "var(--primary-contrast-color)";
   }
   }
 
