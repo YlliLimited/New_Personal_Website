@@ -211,14 +211,23 @@ window.addEventListener("scroll", function() {
     hero.heroInView = true;
   }
 }, false);
-window.addEventListener("click", function(event) {
+window.addEventListener("mouseup", function(event) {
   console.log(event.target);
   if (event.target === about || event.target === sectionButton[0] || event.target === sectionh4[0]){
     growSection("var(--secondary-contrast-color)");
+    this.setTimeout(function() {
+      document.location.href = "about.html";
+    }, 550)
   } else if (event.target === works || event.target === sectionButton[1] || event.target === sectionh4[1]){
     growSection("var(--tertiary-contrast-color)");
+    this.setTimeout(function() {
+      document.location.href = "works.html";
+    },550)
   } else if (event.target === contact || event.target === sectionButton[2] || event.target === sectionh4[2]){
     growSection("var(--quantertary-contrast-color)");
+    this.setTimeout(function() {
+      document.location.href = "contact.html";
+    }, 550)
   } 
 }, false);
 
