@@ -65,14 +65,14 @@ h6{
 }
 p{
   font-family:'Jost', sans-serif;
-  font-size: clamp(1.5rem, 2.8w, 3.8rem);
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   line-height: 1.3;
   letter-spacing: 0.2px;
   font-weight: 400;
 }
 small{
   font-family:'Jost', sans-serif;
-  font-size: clamp(0.9rem, 2.2vw, 3.2rem);
+  font-size: clamp(0.9rem, 1.5vw, 1.9rem);
   line-height: 1.3;
   letter-spacing: 0.2px;
   font-weight: 400;
@@ -88,6 +88,7 @@ em{
 body, html{
   background-color: var(--color-other-4);
   user-select: none;
+  scroll-behavior: smooth;
 
   margin: 0px;
   padding: 0px;
@@ -543,15 +544,13 @@ body, html{
 
 
 
-
-
-/* About */
+/* Works */
 #works{
   .ParentTitle{
     background-color: var(--tertiary-contrast-color);
   }
 }
-/* About End */
+/* Works End */
 
 
 
@@ -559,15 +558,79 @@ body, html{
 
 
 
-
-
-
-
-
-/* About */
+/* Contact */
 #contact{
   .ParentTitle{
     background-color: var(--quantertary-contrast-color);
   }
 }
-/* About End */
+/* Contact End */
+
+
+
+
+
+
+
+
+/* Footer */
+.footerParent{
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-other-2);
+
+  margin-top: 200px;
+
+  padding: 100px 0px;
+
+  .footerChild:first-child{
+    width: 30%;
+    
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a{
+      color: var(--color-other-0);
+    }
+
+    h6{
+      color: var(--color-other-0);
+      margin: 0px 20px;
+
+      transition: letter-spacing 0.2s;
+    }
+    h6:hover{
+      letter-spacing: 5px;
+    }
+  }
+    .footerChild:last-child{
+      width: 70%;
+
+      height: fit-content;
+
+      h6{
+        margin: 0px;
+        text-align: center;
+
+        color: var(--color-other-1);
+      }
+
+    }
+  }
+
+  .footerCopy{
+    position: relative;
+    padding: 20px;
+    background-color: var(--color-other-0);
+    color: var(--color-other-3);
+    display: block;
+  }
+/* Footer End */

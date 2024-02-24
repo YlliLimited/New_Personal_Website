@@ -75,8 +75,8 @@ const navButton = document.querySelector(".navButton");
      }
   }
 
-navButton.onclick = function() {toggleNavbar()};
-navBackground.onclick = function() {toggleNavbar()};
+navButton.onmouseup = function() {toggleNavbar()};
+navBackground.onmouseup = function() {toggleNavbar()};
 
 //Navbar End
 
@@ -94,6 +94,14 @@ navBackground.onclick = function() {toggleNavbar()};
   const works = document.getElementsByClassName("ParentTitle")[1];
   const contact = document.getElementsByClassName("ParentTitle")[2];
 //Sections End
+
+
+
+//Footer
+const insta = document.getElementsByClassName("footerSM")[0];
+const facebook = document.getElementsByClassName("footerSM")[1];
+const vsco = document.getElementsByClassName("footerSM")[2];
+//Footer End
 
 
 
@@ -123,10 +131,17 @@ function changeCursor(cursor){
   cursorPage.style.backgroundImage = "url(/assets/images/wCursor.ico)";
 } else if (cursor === contact) {
   cursorPage.style.backgroundImage = "url(/assets/images/cCursor.ico)";
+} else if(cursor === insta) {
+  cursorPage.style.backgroundImage = "url(/assets/images/instagram.svg)";
+} else if(cursor === facebook) {
+  cursorPage.style.backgroundImage = "url(/assets/images/facebook.svg)";
+} else if(cursor === vsco) {
+  cursorPage.style.backgroundImage = "url(/assets/images/vsco.svg)";
 } else if (cursor === "none") {
   cursorPage.style.backgroundImage = "none";
   cursorPage.style.display = "none";
 }
+
 }
 
 function moveCursor(e) {
@@ -168,6 +183,12 @@ window.addEventListener("mousemove", function(event) {
     changeCursor(works);
   } else if(contact.matches(":hover")){
     changeCursor(contact);
+  } else if(insta.matches(":hover")){
+    changeCursor(insta);
+  } else if(facebook.matches(":hover")){
+    changeCursor(facebook);
+  } else if(vsco.matches(":hover")){
+    changeCursor(vsco);
   } else{
     changeCursor("none");
   }
