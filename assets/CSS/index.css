@@ -149,13 +149,31 @@ body, html{
 }
 
 .ParentTitle:hover{
-  cursor:pointer;
+  cursor: pointer;
 }
 .ParentTitle:hover h4{
   letter-spacing: 6px;
 }
 .ParentTitle:hover .sectionButton div{
   width: 20cqw;
+}
+
+
+#cursor{
+  position: absolute;
+  width: 50px;
+  aspect-ratio: 1;
+
+  z-index: 20;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: none;
+  display: none;
+
+
+  transition: background-image 0.2s;
 }
 /* Page Components End*/
 

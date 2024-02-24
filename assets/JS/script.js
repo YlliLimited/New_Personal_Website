@@ -89,6 +89,11 @@ navBackground.onclick = function() {toggleNavbar()};
 
 
 
+//Sections
+  const about = document.getElementsByClassName("ParentTitle")[0];
+  const works = document.getElementsByClassName("ParentTitle")[1];
+  const contact = document.getElementsByClassName("ParentTitle")[2];
+//Sections End
 
 
 
@@ -107,7 +112,28 @@ navBackground.onclick = function() {toggleNavbar()};
 
 
 
+//Global Functions
+const cursorPage = document.getElementById("cursor");
 
+function changeCursor(cursor){
+  cursorPage.style.display = "block";
+  if (cursor === about){
+  cursorPage.style.backgroundImage = "url(/assets/images/aCursor.ico)";
+} else if (cursor === works) {
+  cursorPage.style.backgroundImage = "url(/assets/images/wCursor.ico)";
+} else if (cursor === contact) {
+  cursorPage.style.backgroundImage = "url(/assets/images/cCursor.ico)";
+} else if (cursor === "none") {
+  cursorPage.style.backgroundImage = "none";
+  cursorPage.style.display = "none";
+}
+}
+
+function moveCursor(e) {
+  cursorPage.style.left = e.pageX + 5 + "px";
+  cursorPage.style.top = e.pageY + 5 + "px";
+}
+//Global Functions End
 
 
 
@@ -116,6 +142,9 @@ navBackground.onclick = function() {toggleNavbar()};
 
 
 window.addEventListener("mousemove", function(event) {
+
+  moveCursor(event);
+
   if (hero.heroInView) {
     if (hero.heroSections.matches(":hover")){
 
@@ -132,7 +161,16 @@ window.addEventListener("mousemove", function(event) {
     hero.heroText.style.color = "var(--color-other-0)";
   }
   }
-  
+
+  if(about.matches(":hover")){
+    changeCursor(about);
+  } else if(works.matches(":hover")){
+    changeCursor(works);
+  } else if(contact.matches(":hover")){
+    changeCursor(contact);
+  } else{
+    changeCursor("none");
+  }
 }, false)
 window.addEventListener("scroll", function() {
   if(this.window.scrollY - parseInt(hero.heroSectionHeight) >= 0){
