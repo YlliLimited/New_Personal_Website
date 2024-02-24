@@ -90,9 +90,14 @@ navBackground.onmouseup = function() {toggleNavbar()};
 
 
 //Sections
+  const sections = document.getElementById("sections");
   const about = document.getElementsByClassName("ParentTitle")[0];
   const works = document.getElementsByClassName("ParentTitle")[1];
   const contact = document.getElementsByClassName("ParentTitle")[2];
+  const sectionGrow = document.getElementById("sectionGrow");
+  
+  const sectionButton = document.querySelectorAll(" .ParentTitle .sectionButton"); 
+  const sectionh4 = document.querySelectorAll(".ParentTitle h4");
 //Sections End
 
 
@@ -145,8 +150,14 @@ function changeCursor(cursor){
 }
 
 function moveCursor(e) {
-  cursorPage.style.left = e.pageX + 5 + "px";
-  cursorPage.style.top = e.pageY + 5 + "px";
+  cursorPage.style.left = e.pageX + 10 + "px";
+  cursorPage.style.top = e.pageY + 10 + "px";
+}
+
+
+function growSection(color) {
+  sectionGrow.style.backgroundColor = color;
+  sectionGrow.style.height = "100vh";
 }
 //Global Functions End
 
@@ -200,6 +211,15 @@ window.addEventListener("scroll", function() {
     hero.heroInView = true;
   }
 }, false);
-
+window.addEventListener("click", function(event) {
+  console.log(event.target);
+  if (event.target === about || event.target === sectionButton[0] || event.target === sectionh4[0]){
+    growSection("var(--secondary-contrast-color)");
+  } else if (event.target === works || event.target === sectionButton[1] || event.target === sectionh4[1]){
+    growSection("var(--tertiary-contrast-color)");
+  } else if (event.target === contact || event.target === sectionButton[2] || event.target === sectionh4[2]){
+    growSection("var(--quantertary-contrast-color)");
+  } 
+}, false);
 
 //Event Listeners End
