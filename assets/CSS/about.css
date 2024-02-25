@@ -398,7 +398,7 @@ body, html{
   width: 100%;
   height: fit-content;
 
-  h4{
+  h3{
     margin-top: 35vh;
     text-align: center;
     color: var(--quantertary-contrast-color);
@@ -413,10 +413,45 @@ body, html{
     align-items: center;
 
     .child{
-      width: clamp(300px, calc(50% - 20px), 887px);
+      width: clamp(300px, calc(50% - 50px), 887px);
       aspect-ratio: 10 / 8;
       background-color: var(--quantertary-contrast-color);
       margin: 10px;
+
+      padding: 15px;
+
+      .cardTop{
+
+        height: fit-content;
+
+        display: flex;
+        justify-content: start;
+        align-items: center;
+
+        .cardNumber{
+          width: fit-content;
+          height: fit-content;
+
+
+          padding: 0px 7%;
+
+          border-radius: 50%;
+          border: 1px solid var(--primary-color); 
+
+            h4{
+              margin: 0px;
+              padding: 0px;
+              color: var(--primary-color);
+            }
+          }
+
+          h5{
+            margin: 0px;
+            margin-left: 31%;
+            transform: translateX(-50%);
+            padding:0px;
+          }
+      }
     }
   }
 }
