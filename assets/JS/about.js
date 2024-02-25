@@ -40,10 +40,6 @@ navBackground.onmouseup = function() {toggleNavbar()};
 
 
 
-//Hero
-//Hero End
-
-
 
 
 
@@ -76,6 +72,10 @@ const vsco = document.getElementsByClassName("footerSM")[2];
 
 //Global Functions
 const cursorPage = document.getElementById("cursor");
+const body = document.getElementsByTagName("body")[0];
+const changesBack = document.getElementsByClassName("changesBackground");
+const navCircles = document.querySelectorAll(".navButton .navPoint");
+const vertLines = document.querySelectorAll(".verticalLine");
 
 function changeCursor(cursor){
   cursorPage.style.display = "block";
@@ -98,13 +98,17 @@ function moveCursor(e) {
   cursorPage.style.top = e.pageY + 10 + "px";
 }
 
+
 //Global Functions End
 
 
 
 
-//Event Listeners
 
+ 
+
+
+//Event Listeners
 
 window.addEventListener("mousemove", function(event) {
 
@@ -120,6 +124,30 @@ window.addEventListener("mousemove", function(event) {
     changeCursor("none");
   }
 }, false)
+
+//________________________________________________________
+
+let observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    console.log(entry.className);
+    console.log(changesBack[0].id);
+    if(entry.target.id === changesBack[0].id && entry.isIntersecting){
+      body.style.backgroundColor = "var(--quantertary-contrast-color)";
+      aboutText.style.color = "var(--secondary-contrast-color)";
+      navCircles.forEach((point) => point.style.backgroundColor = "var(--secondary-contrast-color)");
+      vertLines.forEach((line) => line.style.color = "var(--secondary-contrast-color)");
+    }
+    else{
+      body.style.backgroundColor = "var(--secondary-contrast-color)"
+      navCircles.forEach((point) => point.style.backgroundColor = "var(--quantertary-contrast-color)");
+      vertLines.forEach((line) => line.style.color = "var(--quantertary-contrast-color)");
+    }
+  }); 
+});
+
+for (let cB of changesBack){
+  observer.observe(cB);
+}
 
 //________________________________________________________
 

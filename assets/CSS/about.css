@@ -93,7 +93,7 @@ body, html{
   margin: 0px;
   padding: 0px;
 
-  transition: background-color 0.2s;
+  transition: background-color 0.4s;
 }
 
 
@@ -378,15 +378,49 @@ body, html{
   color: var(--quantertary-contrast-color);
 
   margin-top: 80px;
-  margin-bottom: 80px;
 
   margin-left: 50%;
   transform: translateX(-50%);
 
-  transition: color 0.2s;
+  transition: color 0.4s;
 }
 /* About me end */
 
+
+
+
+/* Workflow */
+#workflow{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+
+  h4{
+    margin-top: 35vh;
+    text-align: center;
+    color: var(--quantertary-contrast-color);
+  }
+  .parent{
+    width: clamp(300px, 80vw, 1800px);
+    aspect-ratio: 10 / 8;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-items: center;
+
+    .child{
+      width: clamp(300px, calc(50% - 20px), 887px);
+      aspect-ratio: 10 / 8;
+      background-color: var(--quantertary-contrast-color);
+      margin: 10px;
+    }
+  }
+}
+/* Workflow End */
 
 
 
