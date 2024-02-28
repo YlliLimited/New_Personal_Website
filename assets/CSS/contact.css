@@ -106,59 +106,6 @@ body, html{
 
 
 /* Page Components */
-.ParentTitle{
-  height: fit-content;
-  padding: clamp(40px,5vw,100px);
-
-  background-color: var(--quantertary-contrast-color);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  h4{
-    margin: 0px;
-    color: var(--primary-contrast-color);
-    transition: letter-spacing 0.2s;
-  }
-
-  .ChildTitle{
-    width: 50%;
-    height: fit-content;
-  }
-
-  .sectionButton{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-
-    h1{
-      margin: 0px;
-    }
-
-    div{
-      width: 5cqw;
-      height: 0px;
-      border: 2px solid var(--primary-contrast-color);
-
-      transition: width 0.2s;
-    }
-  }
-
-}
-
-.ParentTitle:hover{
-  cursor: pointer;
-}
-.ParentTitle:hover h4{
-  letter-spacing: 6px;
-}
-.ParentTitle:hover .sectionButton div{
-  width: 20cqw;
-}
-
 
 #cursor{
   position: absolute;
