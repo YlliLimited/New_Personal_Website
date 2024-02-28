@@ -1,0 +1,435 @@
+/* Base info */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Fondamento:ital@0;1&display=swap');
+
+:root{
+  --primary-color:rgb(97, 130, 100);
+  --secondary-color:rgb(121, 172, 120);
+  --tertiary-color:rgb(176, 217, 177);
+  --quantertary-color:rgb(208, 231, 210);
+
+  --primary-contrast-color:rgb(26, 18, 11);
+  --secondary-contrast-color:rgb(60, 42, 33);
+  --tertiary-contrast-color:rgb(213, 206, 163);
+  --quantertary-contrast-color:rgb(229, 229, 203);
+
+  --color-other-0:rgb(49, 61, 38);
+  --color-other-1:rgb(67, 83, 52);
+  --color-other-2:rgb(158, 179, 132);
+  --color-other-3:rgb(206, 222, 189);
+  --color-other-4:rgb(247, 239, 229);
+}
+
+h1{
+  font-family:'Fondamento', serif;
+  font-size: clamp(4.5rem, 10vw, 11rem);
+  line-height: 1.1;
+  letter-spacing: -1px;
+  font-weight: 200;
+}
+h2{
+  font-family:'Fondamento', serif;
+  font-size: clamp(4.1rem, 8.8vw, 9.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  font-weight: 200;
+}
+h3{
+  font-family:'Fondamento', serif;
+  font-size: clamp(3.7rem, 7.6vw, 8.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+  font-weight: 200;
+}
+h4{
+  font-family:'Fondamento', serif;
+  font-size: clamp(3.3rem, 6.4vw, 7.4rem);
+  line-height: 1.15;
+  letter-spacing: -0.4px;
+  font-weight: 200;
+}
+h5{
+  font-family:'Fondamento', serif;
+  font-size: clamp(2.9rem, 5.2vw, 6.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.2px;
+  font-weight: 200;
+}
+h6{
+  font-family:'Fondamento', serif;
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.2;
+  letter-spacing: 0px;
+  font-weight: 200;
+}
+p{
+  font-family:'Jost', sans-serif;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+}
+small{
+  font-family:'Jost', sans-serif;
+  font-size: clamp(0.9rem, 1.5vw, 1.9rem);
+  line-height: 1.3;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+}
+em{
+  font-family:'Jost', sans-serif;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+body, html{
+  background-color: var(--quantertary-contrast-color);
+  user-select: none;
+  scroll-behavior: smooth;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+/* Base info End */
+
+
+
+
+
+
+
+/* Page Components */
+.ParentTitle{
+  height: fit-content;
+  padding: clamp(40px,5vw,100px);
+
+  background-color: var(--quantertary-contrast-color);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h4{
+    margin: 0px;
+    color: var(--primary-contrast-color);
+    transition: letter-spacing 0.2s;
+  }
+
+  .ChildTitle{
+    width: 50%;
+    height: fit-content;
+  }
+
+  .sectionButton{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    h1{
+      margin: 0px;
+    }
+
+    div{
+      width: 5cqw;
+      height: 0px;
+      border: 2px solid var(--primary-contrast-color);
+
+      transition: width 0.2s;
+    }
+  }
+
+}
+
+.ParentTitle:hover{
+  cursor: pointer;
+}
+.ParentTitle:hover h4{
+  letter-spacing: 6px;
+}
+.ParentTitle:hover .sectionButton div{
+  width: 20cqw;
+}
+
+
+#cursor{
+  position: absolute;
+  width: 50px;
+  aspect-ratio: 1;
+
+  z-index: 20;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: none;
+  display: none;
+
+
+  transition: background-image 0.2s;
+}
+/* Page Components End*/
+
+
+
+
+
+
+
+
+
+
+/* Vertical Lines */
+
+.verticalLine{
+  writing-mode:vertical-lr;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 1vw;
+
+  color: var(--primary-contrast-color);
+
+  z-index: 5;
+}
+
+.vlR{
+  right: -6px;
+  margin-right: 1vw;
+}
+
+/* Vertical Lines End*/
+
+
+
+
+
+
+
+
+
+/* Navbar */
+
+.navButton{
+  width: 35px;
+  aspect-ratio: 1;
+
+  position: fixed;
+  z-index: 10;
+
+  top: 20px;
+  left: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  div{
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items:center;
+
+    .navPoint{
+      background-color: var(--primary-contrast-color);
+      width: 10px;
+      aspect-ratio: 1;
+      border-radius: 100000px;
+    }
+  }
+
+  transition: transform 0.2s linear, left 0.2s;
+}
+.navButton:hover{
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.navBackground{
+    z-index: 10;
+
+    width: 0%;
+    height: 0vh;
+
+    position: fixed;
+
+    background-color: rgb(200, 174, 125, 0.1);
+
+  .navCard{
+    width: 0px;
+    aspect-ratio:1;
+    position: fixed;
+    background-color: var(--color-other-0);
+    top: 0px;
+    left: 0px;
+
+    z-index: 10;
+
+    border-bottom-right-radius: 100px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    overflow: hidden;
+
+    transition: width 0.2s, height 0.2s;
+
+
+    .navSection{
+      width: 50%;
+      height: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .navSection:hover{
+      cursor: pointer;
+    }
+
+    .navSection:nth-child(1){
+      background-color: var(--color-other-0);
+    }
+    .navSection:nth-child(2){
+      background-color: var(--color-other-1);
+    }
+    .navSection:nth-child(3){
+       background-color: var(--color-other-2);
+    }
+    .navSection:nth-child(4){
+      border-radius: inherit;
+       background-color: var(--color-other-3);
+    }
+
+    p{
+      z-index: 5;
+      font-family: "Fondamento";
+      font-size: clamp(20px,2cqw, 4rem);
+      color: var(--primary-contrast-color);
+    }
+
+    .navCardCircle{
+      position: absolute;
+      width: 0px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      z-index: 0;
+
+      transition: width 0.2s;
+    }
+    .navSection:nth-child(1) .navCardCircle{
+      background-color: var(--color-other-3);
+    }
+    .navSection:nth-child(2) .navCardCircle{
+      background-color: var(--color-other-2);
+    }
+    .navSection:nth-child(3) .navCardCircle{
+      background-color: var(--color-other-1);
+    }
+    .navSection:nth-child(4) .navCardCircle{
+      background-color: var(--color-other-0);
+    }
+    .navSection:hover .navCardCircle{
+      width: 9cqw;
+    }
+}
+}
+
+
+
+/* Navbar End */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footerParent{
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-other-2);
+
+  margin-top: 200px;
+
+  padding: 100px 0px;
+
+  .footerChild:first-child{
+    width: 30%;
+    
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a{
+      color: var(--color-other-0);
+    }
+
+    h6{
+      color: var(--color-other-0);
+      margin: 0px 20px;
+
+      transition: letter-spacing 0.2s;
+    }
+    h6:hover{
+      letter-spacing: 5px;
+    }
+  }
+    .footerChild:last-child{
+      width: 70%;
+
+      height: fit-content;
+
+      h6{
+        margin: 0px;
+        text-align: center;
+
+        color: var(--color-other-1);
+      }
+
+    }
+  }
+
+  .footerCopy{
+    position: relative;
+    padding: 20px;
+    background-color: var(--color-other-0);
+    color: var(--color-other-3);
+    display: block;
+  }
+/* Footer End */
