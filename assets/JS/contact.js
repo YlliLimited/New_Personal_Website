@@ -70,11 +70,11 @@ const cursorPage = document.getElementById("cursor");
 function changeCursor(cursor){
   cursorPage.style.display = "block";
 if(cursor === insta) {
-  cursorPage.style.backgroundImage = "url(/assets/images/instagram.svg)";
+  cursorPage.style.backgroundImage = "url(/assets/images/instagramC.svg)";
 } else if(cursor === facebook) {
-  cursorPage.style.backgroundImage = "url(/assets/images/facebook.svg)";
+  cursorPage.style.backgroundImage = "url(/assets/images/facebookC.svg)";
 } else if(cursor === vsco) {
-  cursorPage.style.backgroundImage = "url(/assets/images/vsco.svg)";
+  cursorPage.style.backgroundImage = "url(/assets/images/vscoC.svg)";
 } else if (cursor === "none") {
   cursorPage.style.backgroundImage = "none";
   cursorPage.style.display = "none";
