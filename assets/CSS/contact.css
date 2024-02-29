@@ -123,6 +123,14 @@ body, html{
 
   transition: background-image 0.2s;
 }
+
+@keyframes fadeIn {
+  from{
+    opacity:0;
+  } to{
+    opacity: 1;
+  }
+}
 /* Page Components End*/
 
 
@@ -143,9 +151,11 @@ body, html{
   transform: translateY(-50%);
   margin-left: 1vw;
 
-  color: var(--color-other-0);
+  color: var(--quantertary-contrast-color);
 
   z-index: 5;
+
+  animation: forwards ease-in fadeIn 0.5s;
 }
 
 .vlR{
@@ -180,6 +190,8 @@ body, html{
   align-items: center;
   flex-wrap: wrap;
 
+  animation: forwards ease-in fadeIn 0.5s;
+
   div{
     width: 50%;
 
@@ -188,7 +200,7 @@ body, html{
     align-items:center;
 
     .navPoint{
-      background-color: var(--color-other-0);
+      background-color: var(--quantertary-contrast-color);
       width: 10px;
       aspect-ratio: 1;
       border-radius: 100000px;
@@ -316,13 +328,27 @@ body, html{
   width: 100%;
   height: fit-content;
 
+  padding: 5cqw 0px;
+
   display: flex;
   justify-content: center;
   align-self: center;
+
+  background-image: url(/assets/images/img_1.JPG);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  animation: forwards ease-in fadeIn 0.5s;
 }
+
 .form{
   width: clamp(250px, 70vw, 1800px);
   height: fit-content;
+
+  padding: 30px 6.5cqw 200px 6.5cqw;
+
+  background-color: var(--quantertary-contrast-color);
 
   h1{
     text-align: center;
